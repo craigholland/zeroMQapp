@@ -6,9 +6,11 @@ Author: Min RK <benjaminrk@gmail.com>
 import sys
 from mdwrkapi import MajorDomoWorker
 
+
 def workOnRequest(req):
   print 'WORKING: {0}'.format(req)
   return req
+
 
 def main():
     verbose = '-v' in sys.argv

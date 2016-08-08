@@ -11,6 +11,7 @@ import zmq
 import MDP
 from zhelpers import dump
 
+
 class MajorDomoClient(object):
     """Majordomo Protocol Client API, Python version.
       Implements the MDP/Worker spec at http:#rfc.zeromq.org/spec:7.
@@ -31,7 +32,6 @@ class MajorDomoClient(object):
         logging.basicConfig(format="%(asctime)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S",
                 level=logging.INFO)
         self.reconnect_to_broker()
-
 
     def reconnect_to_broker(self):
         """Connect or reconnect to broker"""
@@ -64,7 +64,7 @@ class MajorDomoClient(object):
             try:
                 items = self.poller.poll(self.timeout)
             except KeyboardInterrupt:
-                break # interrupted
+                break  # interrupted
 
             if items:
                 msg = self.client.recv_multipart()

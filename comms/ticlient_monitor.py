@@ -35,7 +35,7 @@ def main():
     session = MajorDomoClient("tcp://localhost:5555", verbose)
 
     #  1. Send 'echo' request to Titanic
-    request = ["echo", "Hello world"]
+    request = ["monitor", "Hello craig"]
     reply = service_call(session, "titanic.request", request)
 
     uuid = None
